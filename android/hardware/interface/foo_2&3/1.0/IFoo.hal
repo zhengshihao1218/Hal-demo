@@ -1,0 +1,7 @@
+package android.hardware.foo@1.0;
+ 
+interface IFoo{
+ 
+    foo_add(int32_t a, int32_t b) generates (int32_t result);
+ 
+};
