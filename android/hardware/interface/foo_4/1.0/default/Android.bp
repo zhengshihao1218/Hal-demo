@@ -1,0 +1,21 @@
+// FIXME: your file license if you have one
+
+cc_binary {
+    name: "android.hardware.foo@1.0-service",
+    defaults: ["hidl_defaults"],
+    relative_install_path: "hw",
+    vendor: true,
+    srcs: [
+        "service.cpp",
+        "Foo.cpp"
+    ],
+    init_rc: ["android.hardware.foo@1.0-service.rc"],
+    shared_libs: [
+		"liblog",
+        "libhidlbase",
+        "libhidltransport",
+        "libutils",
+        "libhardware",
+        "android.hardware.foo@1.0",
+    ],
+}
